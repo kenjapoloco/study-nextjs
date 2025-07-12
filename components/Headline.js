@@ -11,7 +11,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export default function Headline(props) {
+export function Headline(props) {
   return (
     <div>
           <h1 className={styles.title}>{props.page} page</h1>
@@ -27,8 +27,9 @@ export default function Headline(props) {
             <li>
               Get started by editing <code>src/pages/{props.page}.js</code>.
             </li>
-            <li>Save and see your changes instantly.</li>
+            {props.code}
           </ol>
+          <button onClick={props.onClick}>ボタン</button>
       </div>
   );
 }
