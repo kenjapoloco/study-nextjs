@@ -4,27 +4,31 @@ import classes from "src/styles/Home.module.css";
 import { Footer } from "src/components/Footer";
 import { Main } from "src/components/Main";
 import { Header } from "src/components/Header";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const geistSans = Geist({variable: "--font-geist-sans",subsets: ["latin"],});
 const geistMono = Geist_Mono({variable: "--font-geist-mono",subsets: ["latin"],});
 
-const handleClick = (e) => {
-  console.log(e.target.href);
-  e.preventDefault();
-};
-
-
 export default function Home() {
-useEffect(() => {
-  console.log("マウント時に実行される");
+  const [count,setCount]= useState(1);
+  // 配列の分割代入
+  // 初期値は１
+  const handleClick = (e) => {
+    setCount((count) => count + 1);
+
+  };
+
+
+
+  useEffect(() => {
   document.body.style.backgroundColor = "lightblue";
 
   return () => {
-    console.log("アンマウント時に実行される");
     document.body.style.backgroundColor = "";
   };
 },[]);
+
+console.log(count);
 
   return (
     <div className={classes.container}>
@@ -32,13 +36,12 @@ useEffect(() => {
         <title>Index Page</title>
       </Head>
       <Header />
+      <h1>{count}</h1>
+      <button onClick={handleClick}>ボタン</button>
       <div className={`${classes.page} ${geistSans.variable} ${geistMono.variable}`}>
-      <a href="/about" /*onClick={handleClick}*/ >
-      ボタンをクリックしてAboutページへ移動
-      </a>
         <Main page="index" />
         <Footer />
       </div>
     </div>
   );
-}
+};
