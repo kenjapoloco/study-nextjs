@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+import classes from "./Links.module.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,15 +14,15 @@ const geistMono = Geist_Mono({
 
 export function Links() {
   return (
-          <div className={styles.ctas}>
+          <div className={classes.ctas}>
             <a
-              className={styles.primary}
+              className={classes.primary}
               href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
             >
               <Image
-                className={styles.logo}
+                className={classes.logo}
                 src="/vercel.svg"
                 alt="Vercel logomark"
                 width={20}
@@ -34,7 +34,7 @@ export function Links() {
               href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
               rel="noopener noreferrer"
-              className={styles.secondary}
+              className={classes.secondary}
             >
               Read our docs
             </a>

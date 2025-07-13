@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+import classes from "./Main.module.css";
 import { Links } from "./Links";
 import { Headline } from "./Headline";
 
@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export function Main(props) {
   return (
-        <main className={styles.main}>
+        <main className={classes.main}>
           <Headline page={props.page} code={<li>Save and see your changes instantly.</li>} onClick={() => alert("クリック！")}/>
           <Links />
         </main>

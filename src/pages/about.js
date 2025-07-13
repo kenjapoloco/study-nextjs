@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Geist, Geist_Mono } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+import classes from "@/styles/Home.module.css";
 import { Footer } from "../../components/Footer";
 import { Main } from "../../components/Main";
 
@@ -24,7 +24,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
-        className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
+        className={`${classes.page} ${geistSans.variable} ${geistMono.variable}`}
       >
         <Main page="about" />
         <Footer />

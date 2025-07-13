@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+import classes from "./Headline.module.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 export function Headline(props) {
   return (
     <div>
-          <h1 className={styles.title}>{props.page} page</h1>
+          <h1 className={classes.title}>{props.page} page</h1>
           <Image
-            className={styles.logo}
+            className={classes.logo}
             src="/next.svg"
             alt="Next.js logo"
             width={180}
