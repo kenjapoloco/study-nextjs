@@ -28,7 +28,6 @@ export default function Home() {
   };
 },[]);
 
-console.log(count);
 
   return (
     <div className={classes.container}>
