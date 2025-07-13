@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export function Main(props) {
+
   return (
         <main className={classes.main}>
           <Headline page={props.page} code={<li>Save and see your changes instantly.</li>} onClick={() => alert("クリック！")}/>
