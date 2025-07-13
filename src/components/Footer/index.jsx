@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
-import classes from "./Footer.module.css";
+import classes from "src/components/Footer/Footer.module.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
